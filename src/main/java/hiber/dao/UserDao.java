@@ -2,6 +2,7 @@ package hiber.dao;
 
 import hiber.model.User;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 public interface UserDao {
