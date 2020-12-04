@@ -34,14 +34,19 @@ public class MainApp {
       Car car1 = new Car("Tesla", 1);
       Car car2 = new Car("LADA", 10);
 
-      List<User> usersByCarModelAndSeries = userService.getUsersByCar(new Car("Tesla", 1));
+      //Выведет 2 юзера
+      List<User> users1 = userService.getUsersByCarModelAndSeries(car1);
+      System.out.println();
       System.out.println("--------Users with " + car1 + "---------");
-      for(User user: usersByCarModelAndSeries) {
+      for(User user: users1) {
          System.out.println(user);
       }
 
+      //Выведет 1 юзера
+      List<User> users2 = userService.getUsersByCarModelAndSeries(car2);
+      System.out.println();
       System.out.println("--------Users with " + car2 + "---------");
-      for(User user: usersByCarModelAndSeries) {
+      for(User user: users2) {
          System.out.println(user);
       }
       context.close();

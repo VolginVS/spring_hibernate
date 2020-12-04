@@ -29,7 +29,7 @@ public class UserDaoImp implements UserDao {
 
    @Override
    @SuppressWarnings("unchecked")
-   public List<User> getUsersByCar(Car car) {
+   public List<User> getUsersByCarModelAndSeries(Car car) {
       return sessionFactory.getCurrentSession().createQuery("from User where car.model = :model and car.series = :series", User.class)
               .setParameter("model", car.getModel())
               .setParameter("series", car.getSeries())

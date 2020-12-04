@@ -5,17 +5,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "cars")
 public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "model")
+    @Column
     private String model;
 
-    @Column(name = "series")
+    @Column
     private Integer series;
 
     public Car() {
